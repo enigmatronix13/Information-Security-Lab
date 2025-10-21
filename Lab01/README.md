@@ -30,3 +30,20 @@
    ```
     XPALASXYFGFUKPXUSOGEUTKCDGEXANMGNVS
    ```
+
+## Additional Exercises 
+
+1. Use a brute-force attack to decipher the following message enciphered by Alice using an 
+additive cipher. Suppose that Alice always uses a key that is close to her birthday, which is on 
+the 13th of the month:
+```
+NCJAEZRCLAS/LYODEPRLYZRCLASJLCPEHZDTOPDZOLN&BY
+```
+2.  Eve secretly gets access to Alice's computer and using her cipher types "abcdefghi". The 
+screen shows "CABDEHFGL". If Eve knows that Alice is using a keyed transposition cipher, 
+answer the following questions: 
+a. What type of attack is Eve launching?   
+b. What is the size of the permutation key?
+ 
+3. Use the Vigenere cipher with keyword "HEALTH" to encipher the message "Life is full of 
+surprises". 
