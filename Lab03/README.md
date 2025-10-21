@@ -32,7 +32,6 @@ insecure channel. Implement the Diffie-Hellman key exchange protocol, enabling p
 
 ## Additional Exercises
 
-Additional Exercises: 
 1. With the ElGamal public key (p = 7919, g = 2, h = 6465) and the private key x = 2999, encrypt 
 the message "Asymmetric Algorithms". Decrypt the resulting ciphertext to verify the original 
 message. 
