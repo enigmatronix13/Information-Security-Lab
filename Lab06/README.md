@@ -15,7 +15,5 @@ observation and analysis.
 
 ## Additional Exercises
 
-1. Explore the link [https://www.nmichaels.org/rsa.py] for better 
-understanding.   
-Demonstrate CIA traid using RSA encryption and digital signature 
-along with SHA hashing.  
+1. Explore the [Link - RSA Demonstration Tool](https://www.nmichaels.org/rsa.py) for better understanding.  
+   Demonstrate CIA traid using RSA encryption and digital signature along with SHA hashing.  
