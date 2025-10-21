@@ -25,7 +25,7 @@ ciphertext to verify the original message.
 "FEDCBA9876543210FEDCBA9876543210". Show all the steps involved in the encryption 
 process (key expansion, initial round, main rounds, final round).   
 
-## Additional Exercises: 
+## Additional Exercises  
 
 1.  Using DES and AES(128, 192, and 256 bits key).encrypt the five different messages using 
 same key. 
@@ -34,9 +34,9 @@ b.  Plot the graph which shows execution time taken by each technique.
 c. Compare time taken by different modes of operation
 
 2. Encrypt the following block of data using DES with the key "A1B2C3D4E5F60708". The data 
-to be encrypted is: Mathematica 
-Block1: 54686973206973206120636f6e666964656e7469616c206d657373616765 
-Block2: 416e64207468697320697320746865207365636f6e6420626c6f636b 
+to be encrypted is: Mathematica   
+Block1: 54686973206973206120636f6e666964656e7469616c206d657373616765   
+Block2: 416e64207468697320697320746865207365636f6e6420626c6f636b   
 a. Provide the ciphertext for each block. 
 b. Decrypt the ciphertext to retrieve the original plaintext blocks.
 
