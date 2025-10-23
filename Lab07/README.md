@@ -20,7 +20,7 @@ that it matches the product of the original integers.
 
 ## Additional Exercises  
 
-Implement similar exercise for other PHE operations (like homomorphic multiplication using ElGamal) 
+1. Implement similar exercise for other PHE operations (like homomorphic multiplication using ElGamal) 
 or explore different functionalities within Paillier.   
 1a: Homomorphic Multiplication (ElGamal Cryptosystem): Implement ElGamal encryption 
 and demonstrate homomorphic multiplication on encrypted messages. (ElGamal supports 
