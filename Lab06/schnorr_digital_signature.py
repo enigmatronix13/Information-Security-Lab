@@ -5,15 +5,6 @@ from sympy import isprime, mod_inverse
 
 # Helper function to generate a large prime number
 def generate_large_prime(bits=256):
-    """
-    Generate a random large prime number.
-
-    Args:
-        bits (int): The number of bits for the prime number.
-
-    Returns:
-        int: A large prime number.
-    """
     while True:
         prime_candidate = random.getrandbits(bits)  # Generate a random number with specified bits
         if isprime(prime_candidate):  # Check if the candidate is prime
@@ -22,15 +13,6 @@ def generate_large_prime(bits=256):
 
 # Schnorr Key Generation
 def schnorr_keygen(p_bits=256):
-    """
-    Generate Schnorr public and private keys.
-
-    Args:
-        p_bits (int): The number of bits for the prime number p.
-
-    Returns:
-        tuple: A tuple containing the public key (p, q, g, y) and private key x.
-    """
     while True:
         p = generate_large_prime(p_bits)  # Generate a large prime number p
         q = (p - 1) // 2  # Calculate a safe prime q
@@ -51,19 +33,6 @@ def schnorr_keygen(p_bits=256):
 
 # Schnorr Sign
 def schnorr_sign(message, private_key, p, q, g):
-    """
-    Sign a message using the Schnorr signature scheme.
-
-    Args:
-        message (str): The message to sign.
-        private_key (int): The private key x.
-        p (int): The large prime number p.
-        q (int): The safe prime q.
-        g (int): The generator g.
-
-    Returns:
-        tuple: The signature as (r, s).
-    """
     k = random.randint(1, q)  # Choose a random integer k
     r = pow(g, k, p)  # Compute r = g^k mod p
     # Hash the concatenation of r and message to produce e
@@ -75,17 +44,6 @@ def schnorr_sign(message, private_key, p, q, g):
 
 # Schnorr Verify
 def schnorr_verify(message, signature, public_key):
-    """
-    Verify a Schnorr signature.
-
-    Args:
-        message (str): The signed message.
-        signature (tuple): The signature (r, s).
-        public_key (tuple): The public key (p, q, g, y).
-
-    Returns:
-        bool: True if the signature is valid, False otherwise.
-    """
     r, s = signature  # Unpack the signature
     p, q, g, y = public_key  # Unpack the public key
     # Hash the concatenation of r and message to produce e

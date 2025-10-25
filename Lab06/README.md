@@ -6,12 +6,14 @@
 
 ## Lab Exercises
 
-1. Try using the Elgammal, Schnor asymmetric encryption standard and 
-verify the above steps.    
-2. Try using the Diffie-Hellman asymmetric encryption standard and verify 
-the above steps.   
-3. Try the same in a client server-based scenario and record your 
-observation and analysis.
+1. Implement and demonstrate the ElGamal and Schnorr digital signature schemes.
+Show the process of key generation, message signing, and signature verification to ensure data integrity and authenticity.
+
+2. Implement the Diffie–Hellman key exchange protocol, then use the derived shared key to create and verify digital signatures on exchanged messages.
+Demonstrate how the shared secret can be used to authenticate communication.
+
+3. Extend the above implementations into a client–server model using socket programming.
+In this setup, the client sends a signed message to the server, the server verifies the signature, and both record and analyze observations on message integrity, authenticity, and possible attack scenarios.
 
 ## Additional Exercises
 

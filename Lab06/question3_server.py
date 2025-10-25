@@ -1,7 +1,3 @@
-'''
-Try the same in a client server-based scenario and record your
-observation and analysis.
-'''
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
 import socket

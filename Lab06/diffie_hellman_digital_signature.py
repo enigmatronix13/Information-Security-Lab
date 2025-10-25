@@ -3,15 +3,6 @@ from sympy import isprime
 
 # Generate a large prime number
 def generate_large_prime(bits=256):
-    """
-    Generate a random large prime number.
-    
-    Args:
-        bits (int): The number of bits for the prime number.
-        
-    Returns:
-        int: A large prime number.
-    """
     while True:
         prime_candidate = random.getrandbits(bits)  # Generate a random candidate with specified bits
         if isprime(prime_candidate):  # Check if the candidate is prime
@@ -19,15 +10,6 @@ def generate_large_prime(bits=256):
 
 # Diffie-Hellman Key Exchange
 def dh_keygen(bits=256):
-    """
-    Generate Diffie-Hellman public and private keys and compute shared secrets.
-    
-    Args:
-        bits (int): The number of bits for the prime number p.
-        
-    Returns:
-        tuple: A tuple containing public values (p, g, A, B) and shared secrets for Alice and Bob.
-    """
     p = generate_large_prime(bits)  # Generate a large prime number p
     g = random.randint(2, p - 2)  # Choose a random generator g (primitive root modulo p)
 

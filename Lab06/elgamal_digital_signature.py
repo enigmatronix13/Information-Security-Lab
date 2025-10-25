@@ -3,15 +3,6 @@ from sympy import isprime, mod_inverse
 
 # Helper function to generate a large prime number
 def generate_large_prime(bits=256):
-    """
-    Generate a random large prime number.
-    
-    Args:
-        bits (int): The number of bits for the prime number.
-        
-    Returns:
-        int: A large prime number.
-    """
     while True:
         prime_candidate = random.getrandbits(bits)  # Generate a random number with specified bits
         if isprime(prime_candidate):  # Check if the candidate is prime
@@ -19,15 +10,6 @@ def generate_large_prime(bits=256):
 
 # ElGamal Key Generation
 def elgamal_keygen(bits=256):
-    """
-    Generate ElGamal public and private keys.
-    
-    Args:
-        bits (int): The number of bits for the prime number.
-        
-    Returns:
-        tuple: A tuple containing the public key (p, g, y) and private key x.
-    """
     p = generate_large_prime(bits)  # Generate a large prime number p
     g = random.randint(2, p - 1)  # Choose a random generator g
     x = random.randint(1, p - 2)  # Generate a private key x
@@ -36,16 +18,6 @@ def elgamal_keygen(bits=256):
 
 # ElGamal Encryption
 def elgamal_encrypt(plain_text, public_key):
-    """
-    Encrypt a plaintext message using the ElGamal encryption scheme.
-    
-    Args:
-        plain_text (int): The plaintext message to encrypt.
-        public_key (tuple): The public key (p, g, y).
-        
-    Returns:
-        tuple: The ciphertext as (c1, c2).
-    """
     p, g, y = public_key  # Unpack the public key
     k = random.randint(1, p - 2)  # Choose a random integer k for encryption
     c1 = pow(g, k, p)  # Compute c1 = g^k mod p
@@ -54,17 +26,6 @@ def elgamal_encrypt(plain_text, public_key):
 
 # ElGamal Decryption
 def elgamal_decrypt(cipher_text, private_key, p):
-    """
-    Decrypt a ciphertext using the ElGamal decryption scheme.
-    
-    Args:
-        cipher_text (tuple): The ciphertext (c1, c2) to decrypt.
-        private_key (int): The private key x.
-        p (int): The prime number p used in key generation.
-        
-    Returns:
-        int: The decrypted plaintext message.
-    """
     c1, c2 = cipher_text  # Unpack the ciphertext
     s = pow(c1, private_key, p)  # Compute shared secret s = c1^x mod p
     s_inv = mod_inverse(s, p)  # Compute the modular inverse of s
